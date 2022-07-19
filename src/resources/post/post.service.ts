@@ -1,6 +1,5 @@
 import PostModel from '@/resources/post/post.model';
 import Post from '@/resources/post/post.interface';
-import errorMiddleware from '@/middleware/error.middleware';
 
 class PostService {
     private post = PostModel;
