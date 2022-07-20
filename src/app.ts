@@ -40,10 +40,10 @@ class App {
     }
 
     private intializeDatabaseConnection(): void {
-        const { MONGO_USER, MONGO_PASSWORD, MONGO_PATH } = process.env;
+        const { MONGO_DATABASE, MONGODB_PORT, MONGODB_HOST } = process.env;
 
         mongoose.connect(
-            `mongodb://${MONGO_USER}:${MONGO_PASSWORD}:${MONGO_PATH}`
+            `mongodb://${MONGODB_HOST}:${MONGODB_PORT}/${MONGO_DATABASE}`
         );
     }
 
